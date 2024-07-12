@@ -34,11 +34,11 @@ public class FileSystemImpl implements FileSystem {
             Directory current = root;
             if (parts.length >= 3) {
                 fileName = parts[parts.length - 1];
-                if (parts.length > 2) {
+
                     for (int i = 1; i < parts.length - 1; i++) {
                         current = mkDirWithReturn("/" + parts[i], current);
                     }
-                }
+
             }
 
             if (current != null &&
