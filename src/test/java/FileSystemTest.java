@@ -43,5 +43,14 @@ public class FileSystemTest extends TestCase
         assertEquals(2, files.size());
         assertEquals(true, files.get(0).equals("nunes"));
         assertEquals(true, files.get(1).equals("dirInRodrigues"));
+
+        files =fileSystem.ls("/david");
+
+        String a1 = "";
+
+        assertEquals(1, files.size());
+        assertEquals(true, files.get(0).equals("rodrigues"));
+
+
     }
 }
